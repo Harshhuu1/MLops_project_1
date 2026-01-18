@@ -22,10 +22,15 @@
 
 # # --------------------------------------------------------------------------------
 
-from src.pipline.training_pipeline import TrainPipeline
+# from src.pipline.training_pipeline import TrainPipeline
 
-pipline = TrainPipeline()
-pipline.run_pipeline()
+# pipline = TrainPipeline()
+# pipline.run_pipeline()
 
 
+# Using requests in Python after publishing sheet as CSV
+import requests
+CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-.../pub?gid=0&single=true&output=csv'
+response = requests.get(CSV_URL)
+print(response.text)
 
